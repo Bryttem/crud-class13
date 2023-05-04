@@ -3,8 +3,8 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ComputerModule } from './computer/computer.module';
-import { RespuestModule } from './respuestos/respuesto.module'
+import { SizeModule } from './sizes/size.module';
+
 
 @Module({
   imports: [
@@ -20,8 +20,7 @@ import { RespuestModule } from './respuestos/respuesto.module'
       autoLoadEntities: true,
       synchronize: true,
     }),
-    ComputerModule,
-    RespuestModule,
+    SizeModule,
 
   ],
   controllers: [AppController],
